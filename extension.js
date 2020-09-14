@@ -56,7 +56,7 @@ function activate(context) {
         const selection = editor.selection;
         const text = editor.document.getText(selection);
         const position = new vscode.Position(selection.active.line, selection.active.character);
-        const line = JSON.stringify(position.line/1 + 2)
+        const line = position.line/1 + 2;
 
         text
             ? vscode.commands.executeCommand('editor.action.insertLineAfter')
